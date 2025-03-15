@@ -1,98 +1,102 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Synkro - API de Mensajería en Tiempo Real 🚀
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Bienvenido a **Synkro**, un sistema de mensajería en tiempo real construido con **NestJS** y **Supabase**.  
+Esta API proporciona servicios para manejar **usuarios, chats, mensajes y almacenamiento de imágenes**.  
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+🔗 **Frontend:** [Synkro Realtime](https://synkro-realtime.firebaseapp.com/login)  
 
-## Description
+## 📌 Tecnologías Utilizadas
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- **NestJS** - Framework para la API.
+- **Supabase** - Autenticación, base de datos PostgreSQL y almacenamiento.
+- **PostgreSQL** - Base de datos relacional.
+- **Docker** - Para despliegue y desarrollo.
+- **Render.com** - Para el hosting del backend.
+- **Multer** - Manejo de subida de imágenes.
+- **TypeScript** - Tipado y seguridad en el código.
 
-## Project setup
+---
 
-```bash
-$ npm install
-```
+## 🚀 Instalación y Ejecución
 
-## Compile and run the project
+1️⃣ **Clona el repositorio** y accede a la carpeta del proyecto.  
 
-```bash
-# development
-$ npm run start
+2️⃣ **Instala las dependencias** con un gestor de paquetes.  
 
-# watch mode
-$ npm run start:dev
+3️⃣ **Configura las variables de entorno**, creando un archivo `.env` con las credenciales de **Supabase**.  
 
-# production mode
-$ npm run start:prod
-```
+4️⃣ **Inicia el servidor** en modo desarrollo.  
 
-## Run tests
+5️⃣ **Ejecuta con Docker (opcional)** si prefieres contenerizar la aplicación.  
 
-```bash
-# unit tests
-$ npm run test
+---
 
-# e2e tests
-$ npm run test:e2e
+## 🔥 Endpoints Principales
 
-# test coverage
-$ npm run test:cov
-```
+### 📜 **Usuarios**
+| Método | Endpoint              | Descripción                     |
+|--------|------------------------|---------------------------------|
+| `GET`  | `/users/profile`       | Obtener el perfil del usuario. |
+| `POST` | `/users/upload-avatar` | Subir imagen de perfil. |
 
-## Deployment
+### 💬 **Chats y Mensajes**
+| Método  | Endpoint                   | Descripción                         |
+|---------|----------------------------|-------------------------------------|
+| `GET`   | `/chat/chats`              | Listar chats del usuario.           |
+| `GET`   | `/chat/messages/:chatId`   | Obtener mensajes de un chat.        |
+| `POST`  | `/chat/send`               | Enviar mensaje en un chat.          |
+| `POST`  | `/chat/send-image/:chatId` | Enviar imagen en un chat.           |
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+---
+### 📂 Estructura del Proyecto
+ruby
+Copiar
+Editar
+📦 synkro-api
+├── 📂 src
+│   ├── 📂 chat           # Módulo de chats y mensajes
+│   │   ├── chat.controller.ts
+│   │   ├── chat.module.ts
+│   │   ├── chat.service.ts
+│   ├── 📂 database       # Configuración y conexión con Supabase
+│   │   ├── database.module.ts
+│   │   ├── database.service.ts
+│   ├── 📂 storage        # Servicio de almacenamiento de imágenes
+│   │   ├── storage.module.ts
+│   │   ├── storage.service.ts
+│   ├── 📂 users          # Módulo de usuarios
+│   │   ├── users.controller.ts
+│   │   ├── users.module.ts
+│   │   ├── users.service.ts
+│   ├── app.module.ts     # Módulo principal
+│   ├── main.ts           # Punto de entrada
+├── 📂 test               # Pruebas e2e
+│   ├── app.e2e-spec.ts
+│   ├── jest-e2e.json
+├── 🐳 Dockerfile         # Configuración de Docker
+├── 🔧 eslint.config.mjs  # Reglas de linting
+├── 📦 package.json       # Dependencias
+├── 📝 README.md          # Documentación
+├── 📝 .gitignore         # Archivos ignorados por Git
+├── 📝 .prettierrc        # Configuración de formato de código
+## 🛠️ **Decisiones Técnicas**
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### 1️⃣ 🔹 Uso de Supabase para autenticación y almacenamiento  
+- Se utiliza **Supabase Auth** en lugar de gestionar sesiones en el backend.  
+- La tabla `profiles` almacena solo `username` y `avatar`, ya que `auth.users` maneja los correos.  
 
-```bash
-$ npm install -g mau
-$ mau deploy
-```
+### 2️⃣ 🔹 Chats con estructura flexible  
+- Se usa la tabla `user_chats` para gestionar **usuarios en cada chat**.  
+- Permite que un usuario **elimine su copia** sin afectar al otro.  
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### 3️⃣ 🔹 Paginación de mensajes  
+- Se implementa paginación con `limit=20` en la API.  
+- Se filtran mensajes eliminados con `deleted_at`.  
 
-## Resources
+### 4️⃣ 🔹 WebSockets en tiempo real con Supabase  
+- Se suscriben los clientes a la tabla `messages` en Supabase.  
+- Los nuevos mensajes aparecen sin necesidad de recargar la página.  
 
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### 5️⃣ 🔹 Subida de imágenes a Supabase Storage  
+- Las imágenes se guardan en un **bucket de Supabase** (`chat-images`).  
+- Los mensajes con imágenes almacenan la **URL pública** en `content`.  
