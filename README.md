@@ -49,25 +49,26 @@ Esta API proporciona servicios para manejar **usuarios, chats, mensajes y almace
 
 ---
 ### 📂 Estructura del Proyecto
-ruby
-Copiar
-Editar
-📦 synkro-api
 ├── 📂 src
+
 │   ├── 📂 chat           # Módulo de chats y mensajes
 │   │   ├── chat.controller.ts
 │   │   ├── chat.module.ts
 │   │   ├── chat.service.ts
-│   ├── 📂 database       # Configuración y conexión con Supabase
+
+│   ├── 📂 database       
 │   │   ├── database.module.ts
 │   │   ├── database.service.ts
-│   ├── 📂 storage        # Servicio de almacenamiento de imágenes
+
+│   ├── 📂 storage        
 │   │   ├── storage.module.ts
 │   │   ├── storage.service.ts
-│   ├── 📂 users          # Módulo de usuarios
+
+│   ├── 📂 users          
 │   │   ├── users.controller.ts
 │   │   ├── users.module.ts
 │   │   ├── users.service.ts
+
 │   ├── app.module.ts     # Módulo principal
 │   ├── main.ts           # Punto de entrada
 ├── 📂 test               # Pruebas e2e
@@ -79,6 +80,7 @@ Editar
 ├── 📝 README.md          # Documentación
 ├── 📝 .gitignore         # Archivos ignorados por Git
 ├── 📝 .prettierrc        # Configuración de formato de código
+
 ## 🛠️ **Decisiones Técnicas**
 
 ### 1️⃣ 🔹 Uso de Supabase para autenticación y almacenamiento  
