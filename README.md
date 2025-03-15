@@ -51,34 +51,48 @@ Esta API proporciona servicios para manejar **usuarios, chats, mensajes y almace
 ### 📂 Estructura del Proyecto
 ├── 📂 src
 
-│   ├── 📂 chat           # Módulo de chats y mensajes
+│   ├── 📂 chat 
+
 │   │   ├── chat.controller.ts
+
 │   │   ├── chat.module.ts
+
 │   │   ├── chat.service.ts
 
-│   ├── 📂 database       
+│   ├── 📂 database     
+
 │   │   ├── database.module.ts
+
 │   │   ├── database.service.ts
 
 │   ├── 📂 storage        
+
 │   │   ├── storage.module.ts
+
 │   │   ├── storage.service.ts
 
-│   ├── 📂 users          
+│   ├── 📂 users    
+
 │   │   ├── users.controller.ts
+
 │   │   ├── users.module.ts
+
 │   │   ├── users.service.ts
 
 │   ├── app.module.ts     # Módulo principal
+
 │   ├── main.ts           # Punto de entrada
-├── 📂 test               # Pruebas e2e
-│   ├── app.e2e-spec.ts
-│   ├── jest-e2e.json
+
 ├── 🐳 Dockerfile         # Configuración de Docker
+
 ├── 🔧 eslint.config.mjs  # Reglas de linting
+
 ├── 📦 package.json       # Dependencias
+
 ├── 📝 README.md          # Documentación
+
 ├── 📝 .gitignore         # Archivos ignorados por Git
+
 ├── 📝 .prettierrc        # Configuración de formato de código
 
 ## 🛠️ **Decisiones Técnicas**
