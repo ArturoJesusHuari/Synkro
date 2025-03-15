@@ -4,6 +4,7 @@ Bienvenido a **Synkro**, un sistema de mensajería en tiempo real construido con
 Esta API proporciona servicios para manejar **usuarios, chats, mensajes y almacenamiento de imágenes**.  
 
 🔗 **Frontend:** [Synkro Realtime](https://synkro-realtime.firebaseapp.com/login)  
+Repositorio: [Synkro Front Repo](https://github.com/ArturoJesusHuari/Synkro-Front)
 
 ## 📌 Tecnologías Utilizadas
 
@@ -17,19 +18,16 @@ Esta API proporciona servicios para manejar **usuarios, chats, mensajes y almace
 
 ---
 
-## 🚀 Instalación y Ejecución
+## 📎 Supabase
+![image](https://github.com/user-attachments/assets/a60b72ef-a155-478f-b9c5-fe9b4d83c2f8)
 
-1️⃣ **Clona el repositorio** y accede a la carpeta del proyecto.  
+## 🚀 Despliegue
+![image](https://github.com/user-attachments/assets/1e318c18-ad8d-43a3-9bd2-1c5e1e0624a2)
 
-2️⃣ **Instala las dependencias** con un gestor de paquetes.  
+## 📌 Cronjob
+![image](https://github.com/user-attachments/assets/9e81dd13-2cdc-4173-92ee-fa2af3833f50)
 
-3️⃣ **Configura las variables de entorno**, creando un archivo `.env` con las credenciales de **Supabase**.  
 
-4️⃣ **Inicia el servidor** en modo desarrollo.  
-
-5️⃣ **Ejecuta con Docker (opcional)** si prefieres contenerizar la aplicación.  
-
----
 
 ## 🔥 Endpoints Principales
 
